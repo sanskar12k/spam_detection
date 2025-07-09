@@ -21,12 +21,6 @@ Social media platforms are frequently targeted by bots and spam accounts. Detect
 
 ---
 
-## 🛠️ Architecture Overview
-
-<img src="architecture_diagram.png" alt="Architecture" width="600"/>
-
----
-
 ## 🧪 Features
 
 - ✅ Real-time comment ingestion via Kafka

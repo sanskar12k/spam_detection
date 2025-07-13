@@ -31,7 +31,7 @@ object SpamUserDetection {
       .add("text", StringType, false)
       .add("timestamp", LongType, false)
 
-    val userList = spark.read.option("header", false).schema(userSchema).csv("/Users/mw-sanskar/Documents/SpamDetection/users_500.csv").toDF()
+    val userList = spark.read.option("header", false).schema(userSchema).csv("<path>/users_500.csv").toDF()
 
     val commentStream = spark.readStream
       .format("kafka")
@@ -73,7 +73,7 @@ object SpamUserDetection {
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
       .option("topic", "spammers")
-      .option("checkpointLocation", "/Users/mw/Documents/KafkaLearning/SpamDetection/v2")
+      .option("checkpointLocation", "<path>/SpamDetection/v2")
       .start()
 
     streamUsers.awaitTermination()

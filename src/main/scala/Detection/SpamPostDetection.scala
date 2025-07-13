@@ -77,7 +77,7 @@ object SpamPostDetection {
       .format("kafka")
       .option("kafka.bootstrap.servers", "localhost:9092")
       .option("topic", "flaggedPosts")
-      .option("checkpointLocation", "/Users/mw/Documents/KafkaLearning/SpamDetection/v5")
+      .option("checkpointLocation", "<path>/SpamDetection/v5")
       .start()
 
     streamPost.awaitTermination()
